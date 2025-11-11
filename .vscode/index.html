@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8">
+    <title>Adflare Marketing</title>
+</h1>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("ADFM.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            min-height: 150vh;
+            font-family: "Segoe UI", sans-serif;
+            text-align: center;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #44149e;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 20px 30px;
+            transition: background 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #0056b3;
+            border-radius: 20px;
+        }
+
+        /* Heading styles */
+        h1, h2, h3 {
+            color: #f9f8fa;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        /* Button design */
+        .btn {
+            background-color: #51189b;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #55169c;
+            transform: scale(1.05);
+        }
+
+        /* Service buttons */
+        .btn-container {
+            margin-top: 100px;
+        }
+
+        .service-info {
+            display: none;
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 70%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            color: #333;
+            text-align: left;
+        }
+
+        .service-info h2 {
+            color: #007bff;
+        }
+
+        /* Contact box */
+        .contact-box {
+            display: none;
+            background-color: white;
+            width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        /* Footer */
+        footer {
+            color: #fff;
+            font-size: 20px;
+            margin-top: 50px;
+        }
+
+        .link-button {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .link-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.blogger.com/blog/posts/4085933263164549378" target="_blank">Blog</a>
+        <a href="https://www.instagram.com/adflare_marketing27?igsh=MWNmdDY0c3ZkbnhnYg==" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61579782578950"target="_blank">facebook</a>
+         <a href="https://www.threads.com/@adflare_marketing27"target="_blank">Threads</a>
+        <a href="https://www.linkedin.com/company/108456424/admin/page-posts/published?lipi=urn%3Ali%3Apage%3Ad_flagship3_company_admin%3Bzdg1jCKiSvuhohRiJP%2F%2B3Q%3D%3D"target="_blank">LinkedIn</a>
+    </div>
+
+    <!-- Welcome Heading -->
+    <div style="margin-top: 100px;">
+        <marquee><h1>Welcome to Adflare Marketing</h1></marquee>
+        <p><b>Your creative partner <strong>Adflare Marketing</strong></b></p>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2><marquee>Our Services</marquee></h2>
+
+        <div class="btn-container">
+            <button class="btn" onclick="showService('seo')">SEO</button>
+            <button class="btn" onclick="showService('video')">Video Editing</button>
+            <button class="btn" onclick="showService('copy')">Copywriting</button>
+        </div>
+
+        <div id="seo" class="service-info">
+            <h2>Search Engine Optimization (SEO)</h2>
+            <p>We optimize your website to rank higher on Google using advanced SEO strategies such as keyword research, on-page optimization, and backlink building to grow your audience organically.</p>
+        </div>
+
+        <div id="video" class="service-info">
+            <h2>Video Editing</h2>
+            <p>Our professional team crafts engaging videos with color grading, storytelling, and sound effects — turning your brand ideas into visual experiences that stand out.</p>
+        </div>
+
+        <div id="copy" class="service-info">
+            <h2>Copywriting</h2>
+            <p>We write persuasive, SEO-friendly content that converts. From product descriptions to full campaigns, we bring creativity and clarity to every word.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h3><marquee>Contact Us</marquee></h3>
+        <button class="btn" onclick="showContact()">Show Contact Details</button>
+
+        <div id="contactInfo" class="contact-box">
+            <h3>Contact Details</h3>
+            <p><strong>Email:</strong> adflaremarketing906@gmail.com</p>
+            <p><strong>Phone:</strong> +91 8427882497 / +91 7490939610 / +255 688 494 010/+263787859598</p>
+            <p>🌍 Worldwide Service | ⏰ 24/7 Support | “Just One Call Away”</p>
+        </div>
+    </section>
+
+    <footer>
+        <marquee>"Style with Intelligence" — Adflare Marketing</marquee>
+    </footer>
+
+    <script>
+        function showService(serviceId) {
+            const services = document.getElementsByClassName('service-info');
+            for (let s of services) s.style.display = 'none';
+            document.getElementById(serviceId).style.display = 'block';
+        }
+
+        function showContact() {
+            const box = document.getElementById('contactInfo');
+            box.style.display = (box.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>
